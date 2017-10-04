@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/bootstrap-grid.css">
+    <link rel="stylesheet" href="css/bootstrap-reboot.css">
+    <script src="js/bootstrap.js"></script>
+    <script src="js/script.js"></script>
+    <link rel="stylesheet" href="css/map.css">
+</head>
+<body>
+
+<div class="navbar navbar-inverse bg-inverse">
+    <div class="container d-flex justify-content-between">
+        <h1 class="navbar-brand"> Can You Use Your Power Card Here?</h1>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    </div>
+</div>
+
+<section class="jumbotron text-center">
+    <div class="container">
+        <h1 class="jumbotron-heading">Where Exactly Can You Use Your Dave & Buster's Power Card?</h1>
+        <p class="lead text-muted">Have you ever been out to eat and wonder, "Does my Dave & Buster's card work at any other similar establishment?" Don't be like Mac. Use our search bar to find a location and check out if that place accepts Dave & Buster's Power Card.</p>
+        <p>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/PS691lJzW1E" frameborder="0" allowfullscreen></iframe>
+        </p>
+    </div>
+</section>
+
+
+<div class="album text-muted">
+    <div class="container">
+        <p id="para">
+            example
+        </p>
+    </div>
+</div>
+
+<input id="pac-input" class="controls" type="text" placeholder="Search Box">
+<div id="map"></div>
+<!-- Replace the value of the key parameter with your own API key. -->
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBN-8ZzbLLomgabBVxP6t21Zf0WFJlx7sM&libraries=places&callback=initAutocomplete"
+        async defer></script>
+
+</body>
+<footer>
+
+</footer>
+</html>
