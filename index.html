@@ -10,6 +10,21 @@
     <script src="js/bootstrap.js"></script>
     <script src="js/script.js"></script>
     <link rel="stylesheet" href="css/map.css">
+
+    <script>
+$(document).ready(function(){
+	$("#pac-input").change(function(){
+
+	//alert("Win"); 
+
+    initialize(); 
+});
+});
+// 	$( "#pac-input" ).click(function() {
+//   	initialize();
+// });
+
+</script>
 </head>
 <body>
 
@@ -35,9 +50,9 @@
 
 <div class="album text-muted">
     <div class="container">
-        <p id="para">
-            example
-        </p>
+        <div id="para">
+            Here the results will be displayed
+        </div>
     </div>
 </div>
 
@@ -46,6 +61,29 @@
 <!-- Replace the value of the key parameter with your own API key. -->
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBN-8ZzbLLomgabBVxP6t21Zf0WFJlx7sM&libraries=places&callback=initAutocomplete"
         async defer></script>
+
+<script type="text/javascript">
+	function initialize() 
+  	{
+  	var searchstring = document.getElementById("pac-input").value;
+  	console.log(searchstring);
+  	var lowercase = searchstring.toLowerCase();
+	if (lowercase.includes("dave & buster's") || lowercase.includes("dave and buster's"))
+	{
+		console.log("found");
+		var html = "<div align=\"center\"><img src=\"http://www.stclair.ca/Content/images/header_db.jpg\"></div><br><div align =\"center\"><h1>YES!!!!</h2></div>";
+		document.getElementById("para").innerHTML = html;
+	} 
+	else
+	{
+		var html = "<div align=\"center\"><img src=\"https://jonctv.files.wordpress.com/2013/10/its_always_sunny_in_philadelphia_season_six_image_02.jpg\"></div><br><div align =\"center\"><h1>NO!!!!</h2></div>";
+		document.getElementById("para").innerHTML = html;
+		console.log("not found");
+	}
+  }
+
+</script>
+
 
 </body>
 <footer>
