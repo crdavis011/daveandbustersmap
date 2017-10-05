@@ -29,7 +29,8 @@ function initAutocomplete() {
     // more details for that place.
     searchBox.addListener('places_changed', function() {
 
-        document.getElementById('para').innerHTML = input.value;
+        //document.getElementById('para').innerHTML = input.value;
+        $("#pac-input").change();
 
         var places = searchBox.getPlaces();
 
